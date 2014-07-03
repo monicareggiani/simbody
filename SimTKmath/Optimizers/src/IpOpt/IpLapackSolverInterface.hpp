@@ -123,6 +123,8 @@ namespace Ipopt
 
     bool isFactored;
 
+    int *ipiv;
+
     //@}
 
     /** @name Solver specific options */

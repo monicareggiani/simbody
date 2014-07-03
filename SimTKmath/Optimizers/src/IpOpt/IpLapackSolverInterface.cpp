@@ -20,8 +20,9 @@ namespace Ipopt
   static const Index dbg_verbosity = 0;
 #endif
 
-int *ipiv=0;
-double *afact;
+
+//double *afact;
+
   LapackSolverInterface::LapackSolverInterface()
       :
       n(0),
@@ -29,7 +30,8 @@ double *afact;
       a(NULL),
       irn_(NULL),
       jcn_(NULL),
-      negevals_(-1)
+      negevals_(-1),
+      ipiv(0)
   {
     DBG_START_METH("LapackSolverInterface::LapackSolverInterface()", dbg_verbosity);
   }
